@@ -1,22 +1,26 @@
 function Thermostat(){
-	this.temperature = 20;
+	this.defaultTemperature= 20;
+	this.minTemperature = 10;
+	this.temperature = this.defaultTemperature;
 	this.isPowerSaverOn = true;	
 };
 
 Thermostat.prototype.increaseTemperature = function() {
-	this.increaseTemperatureBy(1);
+	return this.increaseTemperatureBy(1);
 };
 
 Thermostat.prototype.increaseTemperatureBy = function(degrees) {
-	this.temperature += degrees;
+	return this.temperature += degrees;
 };
 
 Thermostat.prototype.decreaseTemperature = function() {
-	this.decreaseTemperatureBy(1);
+	return this.decreaseTemperatureBy(1);
 };
 
 Thermostat.prototype.decreaseTemperatureBy = function(degrees) {
-	this.temperature -= degrees;
+	if(this.temperature - degrees < this.minTemperature) return this.temperature = this.minTemperature;
+		 
+	return this.temperature -= degrees;
 };
 
 Thermostat.prototype.turnPowerSaverOff = function() {

@@ -18,13 +18,16 @@ describe('Thermostat', function(){
 		});
 
 		it('can increase the temperature by one degree', function(){
-			thermostat.increaseTemperature();
-			expect(thermostat.temperature).toEqual(21);
+			expect(thermostat.increaseTemperature()).toEqual(21);
 		});
 
 		it('can decrease the temperature by one degree', function(){
-			thermostat.decreaseTemperature();
-			expect(thermostat.temperature).toEqual(19);
+			expect(thermostat.decreaseTemperature()).toEqual(19);
+		});
+
+		it('should never go below 10', function() {
+			thermostat.decreaseTemperatureBy(12);
+			expect(thermostat.temperature).toEqual(10);
 		});
 
 	});
@@ -46,9 +49,12 @@ describe('Thermostat', function(){
 			expect(thermostat.isPowerSaverOn).toBe(false);
 		});
 
-		it('can tuen Power saving on', function(){
+		it('can turn Power saving on', function(){
+			thermostat.turnPowerSaverOff();
 			thermostat.turnPowerSaverOn();
 			expect(thermostat.isPowerSaverOn).toBe(true);
 		});
+
+		it('')
 	});
 });
