@@ -48,6 +48,6 @@ Thermostat.prototype._isAboveMaxTemperature = function(degrees){
 	return this.temperature + degrees > this.maxTemperature;
 };
 
-Thermostat.prototype._isBellowMinTemperature = function(degrees){
+Thermostat.prototype._isBelowMinTemperature = function(degrees){
 	return this.temperature - degrees < this.minTemperature;
 };
