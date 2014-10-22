@@ -18,3 +18,11 @@ Thermostat.prototype.decreaseTemperature = function() {
 Thermostat.prototype.decreaseTemperatureBy = function(degrees) {
 	this.temperature -= degrees;
 };
+
+Thermostat.prototype.turnPowerSaverOff = function() {
+	this.isPowerSaverOn = false;
+};
+
+Thermostat.prototype.turnPowerSaverOn = function() {
+	this.isPowerSaverOn = true;
+};
