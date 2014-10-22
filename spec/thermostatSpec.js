@@ -24,19 +24,13 @@ describe('Thermostat', function(){
 		it('can decrease the temperature by one degree', function(){
 			expect(thermostat.decreaseTemperature()).toEqual(19);
 		});
-
-		it('should never go below 10', function() {
-			thermostat.decreaseTemperatureBy(12);
-			expect(thermostat.temperature).toEqual(10);
-		});
-
 	});
 
 	describe('custom options', function() {
 
-		it('can increase the temperature by 12', function() {
-			thermostat.increaseTemperatureBy(12);
-			expect(thermostat.temperature).toEqual(32);
+		it('can increase the temperature by 4', function() {
+			thermostat.increaseTemperatureBy(4);
+			expect(thermostat.temperature).toEqual(24);
 		});
 
 		it('can decrease the temperature by 5', function() {
@@ -55,6 +49,26 @@ describe('Thermostat', function(){
 			expect(thermostat.isPowerSaverOn).toBe(true);
 		});
 
-		it('')
+		it('can reset the temperature', function(){
+			expect(thermostat.reset()).toEqual(20);
+		});
+	});
+
+	describe('restrictions', function() {
+
+		it('should never go below 10', function() {
+			thermostat.decreaseTemperatureBy(12);
+			expect(thermostat.temperature).toEqual(10);
+		});
+
+		it('if power saver is on cant go above 25', function(){
+
+			expect(thermostat.increaseTemperatureBy(6)).toEqual(25);
+		});
+
+		it('if powersaver is off it cant go above 32', function() {
+			thermostat.turnPowerSaverOff();
+			expect(thermostat.increaseTemperatureBy(13)).toEqual(32);
+		});
 	});
 });
