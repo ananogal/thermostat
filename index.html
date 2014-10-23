@@ -2,11 +2,32 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Jasmine Spec Runner v2.0.2</title>
-
-  
+  <link rel="stylesheet" type="text/css" href="./public/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./public/css/thermostat.css">
+  <title>Jasmine Spec Runner v2.0.2</title>  
 </head>
 
 <body>
+
+<section>
+	<aside class="temperature">
+		<h1 >Here will be the temperature</h1>
+	</aside>
+	<section >
+		<ul id="diaplay-buttons">
+			<li><a href="#" class="increse_temperature"> + </a></li>
+			<li><a href="#" class="decrese_temperature"> - </a></li>
+			<li><a href="#" class="reset"> reset </a></li>
+		</ul>
+	</section>
+</section>	
+<script src="./public/jquery-2.1.1.min.js"></script>
+<script src="src/thermostat.js"></script>
+<script src="src/interface.js"></script>
+<script>
+	$(document).ready(function() {
+		new ThermostatView('.temperature h1');
+	});
+</script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+.temperature h1{
+	font-size:2em;
+	text-align:center;
+	margin-top:1em;
+}
+
+#diaplay-buttons li{
+	display:inline-block;
+}
+
+.increse_temperature{
+	color:red;
+	font-size:2em;
+}

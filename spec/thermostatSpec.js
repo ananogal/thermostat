@@ -50,7 +50,7 @@ describe('Thermostat', function(){
 		});
 
 		it('can reset the temperature', function(){
-			expect(thermostat.reset()).toEqual(20);
+			expect(thermostat.resetTemperature()).toEqual(20);
 		});
 	});
 
