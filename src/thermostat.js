@@ -13,7 +13,7 @@ Thermostat.prototype.increaseTemperature = function() {
 };
 
 Thermostat.prototype.increaseTemperatureBy = function(degrees) {
-	if(this._isAboveMaxTemperature(degrees)) return this.temperature = this.maxTemperature;
+	if(this._isTemperatureAboveMaxTemperature(degrees)) return this.temperature = this.maxTemperature;
 	
 	return this.temperature += degrees;
 };
@@ -36,13 +36,14 @@ Thermostat.prototype.turnPowerSaverOff = function() {
 Thermostat.prototype.turnPowerSaverOn = function() {
 	this.isPowerSaverOn = true;
 	this._setMaxTemperature();
+	if(this.temperature > this.maxTemperature) return this.temperature = this.maxTemperature
 };
 
 Thermostat.prototype.resetTemperature = function(){
 	return this.temperature = this.defaultTemperature;
 };
 
-Thermostat.prototype._isAboveMaxTemperature = function(degrees){
+Thermostat.prototype._isTemperatureAboveMaxTemperature = function(degrees){
 	return (this.temperature + degrees) > this.maxTemperature;
 };
 

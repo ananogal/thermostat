@@ -70,5 +70,12 @@ describe('Thermostat', function(){
 			thermostat.turnPowerSaverOff();
 			expect(thermostat.increaseTemperatureBy(13)).toEqual(32);
 		});
+
+		it('if powerSaver in turned on and the current temperature > 25 then goes to 25', function(){
+			thermostat.turnPowerSaverOff();
+			thermostat.increaseTemperatureBy(8);
+			thermostat.turnPowerSaverOn();
+			expect(thermostat.temperature).toEqual(25);
+		});
 	});
 });
