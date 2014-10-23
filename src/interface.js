@@ -25,4 +25,7 @@ $(document).ready(function(){
 		thermostat.turnPowerSaverOff();
 	});
 
+	$.getJSON("http://api.openweathermap.org/data/2.5/find?q=London&units=metric", function(data){ 
+		$("#currentTemp").text(data['list'][1]["main"]["temp"]);
+	});
 });
