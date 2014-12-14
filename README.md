@@ -1,7 +1,13 @@
 Thermostat
 ==========
 
-Specification:
+![Thermostat scrrenshot](./public/images/thermostat.png)
+
+Objective
+=========
+Create a simple thermostat.
+
+###Specification:
 
 - Thermostat starts at 20 degrees
 - You can increase the temp with the up button
@@ -16,3 +22,16 @@ Specification:
   - < 18 is green,
   - < 25 is yellow,
   - otherwise red
+
+###Extras
+Add the current location temperature
+
+#How it works
+Clone the repository: `` https://github.com/ananogal/thermostat.git``
+Change to the directory:`` $ cd thermostat``
+
+###In Tests
+To run tests open the Spec file: ``$open SpecRunner.html``
+
+###In Code
+To see the thermostat: ``$open index.html``
