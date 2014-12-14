@@ -19,7 +19,7 @@ body{
 	-webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
 	-moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
 	box-shadow: 2px 2px 15px rgba(0,0,0, .75);
-	margin:10% 45% 2% 45%;
+	margin:3% 45% 2% 45%;
 }
 
 .temperature h1{
@@ -35,11 +35,15 @@ body{
 	box-shadow: 0px 0px 5px rgba(0,0,0, .75);
 }
 
-#diaplay-buttons{
+section#display{
 	text-align:center;
 }
 
-#diaplay-buttons li{
+#display-buttons{
+	text-align:center;
+}
+
+#display-buttons li{
 	display:inline-block;
 	border:1px solid #C95115;
 	border-radius:10px;
@@ -49,7 +53,7 @@ body{
 	margin:5px;
 }
 
-#diaplay-buttons li a{
+#display-buttons li a{
 	text-decoration:none;
 	font-size:1.5em;
 	color:white;
@@ -59,7 +63,7 @@ input[type=radio]{
 	display:none;
 }
 
-label {  
+label#on, label#off {  
     display: inline-block;  
     cursor: pointer;  
     position: relative;  
@@ -67,7 +71,7 @@ label {
     margin-right: 15px; 
 }  
 
-label:before {  
+label:before{  
     content: "";  
     display: inline-block;  
   
@@ -95,7 +99,7 @@ section#section-radios{
 	border-width:0.05em;
 	border-color:#4D7A8C;
 	border-radius:1em;
-	margin-top:3%; 
+	margin-top:1%; 
 	margin-bottom:3%; 
 }
 
@@ -107,12 +111,20 @@ section#actual{
 	display:inline-block;
 	margin-top:5%;
 	text-align:center;
+	font-size:1.6em;
+	color:#C95115;
 }
 
 p#currentTemp{
-	margin:2% 45% 2% 45%;
-	width:40px;
-	border:1px solid #fff;
-	border-radius:10px; 
+	display:inline;
+}
+
+label#city:before{
+	content: ""; 
+	width:0px;
+}
+
+label#city{
+	display:inline;
 }
 

@@ -48,6 +48,6 @@ $(document).ready(function() {
   $(".powerSaveOn").prop("checked", window.view.isPowerOn());
   
   $.getJSON("http://api.openweathermap.org/data/2.5/find?q=London&units=metric", function(data){ 
-		$("#currentTemp").text(parseInt(data.list[1].main.temp));
+		$("#currentTemp").text(parseInt(data.list[1].main.temp)+ 'º');
 	});
 });

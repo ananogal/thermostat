@@ -12,21 +12,21 @@
 
 <main>
 	<section id="actual">
-	<p>London:</p><p id="currentTemp"><p>
+		<label id="city">Outside:</label><p id="currentTemp"><p>
 	</section>
 	<aside class="temperature">
 		<h1 >Here will be the temperature</h1>
 	</aside>
-	<section >
-		<ul id="diaplay-buttons">
+	<section id="display">
+		<ul id="display-buttons">
 			<li class="reset"><a href="#" > |&lt;</a></li>
 			<li class="decrease_temperature"><a href="#" > - </a></li>
 			<li class="increase_temperature"><a href="#" > + </a></li>
 		</ul>
 	</section>
 	<section id="section-radios"> 
-		<input type="radio" name="power" class="powerSaveOn" id="power_on" value="On"> <label for="power_on">On</label></input>
-		<input type="radio" name="power" class="powerSaveOff" id="power_off" value="Off"><label for="power_off">Off</label></input>
+		<input type="radio" name="power" class="powerSaveOn" id="power_on" value="On"> <label id="on" for="power_on">On</label></input>
+		<input type="radio" name="power" class="powerSaveOff" id="power_off" value="Off"><label id="off" for="power_off">Off</label></input>
 	</section>
 </main>	
 <script src="./public/jquery-2.1.1.min.js"></script>
