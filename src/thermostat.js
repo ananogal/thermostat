@@ -31,12 +31,16 @@ Thermostat.prototype.decreaseTemperatureBy = function(degrees) {
 Thermostat.prototype.turnPowerSaverOff = function() {
 	this.isPowerSaverOn = false;
 	this._setMaxTemperature();
+	return this.temperature;
 };
 
 Thermostat.prototype.turnPowerSaverOn = function() {
 	this.isPowerSaverOn = true;
 	this._setMaxTemperature();
-	if(this.temperature > this.maxTemperature) return this.temperature = this.maxTemperature
+	if(this.temperature > this.maxTemperature) 
+		return this.temperature = this.maxTemperature;
+	else
+		return this.temperature;
 };
 
 Thermostat.prototype.resetTemperature = function(){

@@ -1,7 +1,7 @@
 function ThermostatView(element){
 	this.element = $(element);
 	this.thermostat = new Thermostat();
-	$(this.element).text(this.thermostat.temperature+ 'º');
+	$(this.element).text(this.thermostat.temperature + 'º');
 	this.bindTo(".increase_temperature", this.thermostat, this.thermostat.increaseTemperature);
 	this.bindTo(".decrease_temperature", this.thermostat, this.thermostat.decreaseTemperature);
 	this.bindTo(".reset", this.thermostat, this.thermostat.resetTemperature);
@@ -46,38 +46,8 @@ $(document).ready(function() {
 	$('.temperature').css('background-color', window.view.getColor());
 	$('.temperature').css('border', '1px solid ' +window.view.getColor());
   $(".powerSaveOn").prop("checked", window.view.isPowerOn());
+  
   $.getJSON("http://api.openweathermap.org/data/2.5/find?q=London&units=metric", function(data){ 
 		$("#currentTemp").text(parseInt(data.list[1].main.temp));
 	});
 });
-
-// $(document).ready(function(){
-// 	var thermostat = new Thermostat();
-// 	//$(".temperature h1").text(thermostat.temperature).css('color', 'yellow');
-// 	$(".temperature h1").text(thermostat.temperature);
-// 	$(".powerSaveOn").attr('checked', 'checked');
-
-
-// 	$(".increase_temperature").on('click', function(){
-// 		$(".temperature h1").text(thermostat.increaseTemperature());
-// 	});
-
-// 	$(".decrease_temperature").on('click', function(){
-// 		$(".temperature h1").text(thermostat.decreaseTemperature());
-// 	});
-
-// 	$(".reset").on('click', function(){
-// 		$(".temperature h1").text(thermostat.reset());
-// 	});
-
-// 	$('.powerSaveOn').on("click", function(){
-// 			$(".temperature h1").text(thermostat.turnPowerSaverOn());
-// 	});
-
-// 	$('.powerSaveOff').on("click", function() {
-// 		thermostat.turnPowerSaverOff();
-// 	});
-
-	
-
-// });

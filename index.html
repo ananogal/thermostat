@@ -11,23 +11,23 @@
 <body>
 
 <main>
+	<section id="actual">
+	<p>London:</p><p id="currentTemp"><p>
+	</section>
 	<aside class="temperature">
 		<h1 >Here will be the temperature</h1>
 	</aside>
 	<section >
 		<ul id="diaplay-buttons">
-			<li><a href="#" class="increase_temperature"> + </a></li>
-			<li><a href="#" class="decrease_temperature"> - </a></li>
-			<li><a href="#" class="reset"> reset </a></li>
+			<li class="reset"><a href="#" > |&lt;</a></li>
+			<li class="decrease_temperature"><a href="#" > - </a></li>
+			<li class="increase_temperature"><a href="#" > + </a></li>
 		</ul>
 	</section>
-	<aside> 
-		<input type="radio" name="power" class="powerSaveOn" value="On"> On</input>
-		<input type="radio" name="power" class="powerSaveOff" value="Off">Off</input>
-	</aside>
-	<seccion>
-		Actual Temperature:<p id="currentTemp"><p>
-	</seccion>
+	<section id="section-radios"> 
+		<input type="radio" name="power" class="powerSaveOn" id="power_on" value="On"> <label for="power_on">On</label></input>
+		<input type="radio" name="power" class="powerSaveOff" id="power_off" value="Off"><label for="power_off">Off</label></input>
+	</section>
 </main>	
 <script src="./public/jquery-2.1.1.min.js"></script>
 <script src="src/thermostat.js"></script>

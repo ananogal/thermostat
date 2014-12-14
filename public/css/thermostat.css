@@ -19,7 +19,7 @@ body{
 	-webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
 	-moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
 	box-shadow: 2px 2px 15px rgba(0,0,0, .75);
-	margin:20% 45% 5% 45%;
+	margin:10% 45% 2% 45%;
 }
 
 .temperature h1{
@@ -45,7 +45,7 @@ body{
 	border-radius:10px;
 	background-color:#C95115;
 	padding:5px;
-	width:80px;
+	width:50px;
 	margin:5px;
 }
 
@@ -53,7 +53,66 @@ body{
 	text-decoration:none;
 	font-size:1.5em;
 	color:white;
-	margin:5px;
 } 
 
+input[type=radio]{
+	display:none;
+}
+
+label {  
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+    padding-left: 25px;  
+    margin-right: 15px; 
+}  
+
+label:before {  
+    content: "";  
+    display: inline-block;  
+  
+    width: 16px;  
+    height: 16px;  
+  
+    margin-right: 10px;  
+    position: absolute;  
+    left: 0;  
+    bottom: 1px;  
+    background-color: #aaa;  
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);  
+}  
+
+input[type=radio]:checked + label:before {  
+    content: "\2022";  
+    color: #1F6096;  
+    font-size: 30px;  
+    text-align: center;  
+    line-height: 13px;  
+}  
+
+section#section-radios{
+	border-style: solid;
+	border-width:0.05em;
+	border-color:#4D7A8C;
+	border-radius:1em;
+	margin-top:3%; 
+	margin-bottom:3%; 
+}
+
+section#section-radios label:before {
+	border-radius: 0.5em;
+}
+
+section#actual{
+	display:inline-block;
+	margin-top:5%;
+	text-align:center;
+}
+
+p#currentTemp{
+	margin:2% 45% 2% 45%;
+	width:40px;
+	border:1px solid #fff;
+	border-radius:10px; 
+}
 
