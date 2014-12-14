@@ -27,11 +27,11 @@ Create a simple thermostat.
 Add the current location temperature
 
 #How it works
-Clone the repository: `` https://github.com/ananogal/thermostat.git``
+Clone the repository: `` https://github.com/ananogal/thermostat.git``<br/>
 Change to the directory:`` $ cd thermostat``
 
 ###In Tests
 To run tests open the Spec file: ``$open SpecRunner.html``
 
 ###In Code
-To see the thermostat: ``$open index.html``
+Check it out here: https://ana-thermostat.herokuapp.com/
